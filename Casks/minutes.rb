@@ -1,8 +1,8 @@
 cask "minutes" do
-  version "0.5.0"
-  sha256 "ac7909e0a7d0a0c123716680baccc3c827fbcb8b9106d1e51fc1d2e7a4906635"
+  version "0.10.2"
+  sha256 "d0af2543e8976d9d0ff7e2f23fbe7fb56cc4579d8981bf20a813ac021add5acf"
 
-  url "https://github.com/silverstein/minutes/releases/download/v#{version}/Minutes-v#{version}-macos-arm64.zip"
+  url "https://github.com/silverstein/minutes/releases/download/v#{version}/Minutes_#{version}_aarch64.dmg"
   name "Minutes"
   desc "Privacy-first conversation memory — record, transcribe, search meetings locally"
   homepage "https://useminutes.app"
@@ -22,13 +22,6 @@ cask "minutes" do
   ]
 
   caveats <<~EOS
-    Minutes.app is not signed with an Apple Developer certificate.
-    On first launch, right-click the app and select "Open", then click
-    "Open" again in the dialog to bypass Gatekeeper.
-
-    Or remove the quarantine flag (the postflight script does this automatically):
-      xattr -cr /Applications/Minutes.app
-
     To download a whisper model for transcription:
       minutes setup --model small
 
