@@ -1,11 +1,11 @@
 class Minutes < Formula
   desc "Conversation memory for AI assistants — record, transcribe, search"
   homepage "https://useminutes.app"
-  url "https://github.com/silverstein/minutes.git", tag: "v0.16.1"
+  url "https://github.com/silverstein/minutes.git", tag: "v0.16.2"
   license "MIT"
 
-  depends_on "rust" => :build
   depends_on "cmake" => :build
+  depends_on "rust" => :build
 
   def install
     # whisper.cpp (via cmake) needs C++ includes and deployment target on macOS 15+/Xcode 26+
